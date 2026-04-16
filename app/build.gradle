@@ -3,23 +3,15 @@ plugins {
 }
 
 android {
-    namespace "com.example.eq"
+    namespace 'com.heyaudiopro.eq2' // Updated to eq2
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.eq"
-        minSdk 21
+        applicationId "com.heyaudiopro.eq2" // Updated to eq2
+        minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-}
-
-dependencies {
+    // ... rest of the file stays the same
 }
