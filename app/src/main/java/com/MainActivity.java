@@ -1,4 +1,4 @@
-package com.example.eq;
+package com.heyaudiopro.eq2;
 
 import android.os.Bundle;
 import android.webkit.WebView;
