@@ -3,15 +3,34 @@ plugins {
 }
 
 android {
-    namespace 'com.heyaudiopro.eq2' // Updated to eq2
+    namespace 'com.heyaudiopro.eq2'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.heyaudiopro.eq2" // Updated to eq2
+        applicationId "com.heyaudiopro.eq2"
         minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
     }
-    // ... rest of the file stays the same
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
 }
