@@ -1,2 +1,2 @@
-rootProject.name = "EQ"
+rootProject.name = "eq2"
 include ':app'
