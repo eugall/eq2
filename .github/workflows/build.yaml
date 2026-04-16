@@ -23,7 +23,7 @@ jobs:
         run: chmod +x ./gradlew
         
       - name: Build APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --rerun-tasks
       - name: List build outputs
         run: find . -name "*.apk" 2>/dev/null || echo "No APK found"
       - name: Upload APK
