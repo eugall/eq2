@@ -1,4 +1,4 @@
-name: Build Android APK
+concurrency: name: Build Android APK
 on: [push, workflow_dispatch]
 
 jobs:
@@ -14,11 +14,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Official Gradle tool that sets up the 'gradlew' engine for you
+      # This is the official way to set up Gradle in GitHub Actions
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      # This runs the actual build command
+      # This command triggers the actual APK creation
       - name: Build APK
         run: gradle assembleDebug
 
