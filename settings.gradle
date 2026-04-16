@@ -12,6 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-rootProject.name = "eq2" // Update this line
+rootProject.name = "eq2"
 include ':app'
