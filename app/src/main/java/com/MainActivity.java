@@ -1,19 +1,22 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+package com.example.eq;
 
-    <application
-        android:allowBackup="true"
-        android:label="EQ Player"
-        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+import android.os.Bundle;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
+import androidx.appcompat.app.AppCompatActivity;
 
-        <activity android:name=".MainActivity"
-            android:exported="true">
+public class MainActivity extends AppCompatActivity {
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        </activity>
-    </application>
+        WebView webView = new WebView(this);
+        setContentView(webView);
 
-</manifest>
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        webView.loadUrl("file:///android_asset/index.html");
+    }
+}
